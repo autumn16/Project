@@ -1,15 +1,20 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
-
 int main(){
-    int lib[10] = {45,2,17,5,2,34,10,6,1,88};
-    int n = sizeof(lib)/sizeof(lib[0]);
-    for(int j=0; j<n; j++){
-        for(int i=0; i<n-j; i++){
-            if(lib[i+1]<lib[i]) swap(lib[i],lib[i+1]);
-        }
+    vector<int> myVec;
+    vector<int>::iterator ptr;
+    myVec.push_back(1);
+    myVec.push_back(2);
+    myVec.push_back(3);
+    ptr = myVec.begin();
+    auto pTemp = myVec.begin();
+    //myVec.erase(ptr);
+    //myVec.erase(ptr);
+    for(int i=0; i<myVec.size(); i++){
+        cout << myVec[i] << " ";
     }
-    for(int i=0; i<n; i++) cout << lib[i] << " ";
+    cout << endl;
     return 0;
 }
