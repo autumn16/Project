@@ -1,4 +1,5 @@
-// test linkedlist
+// 2020 3 17
+// Linked list implement using C++
 #include <iostream>
 
 using namespace std;

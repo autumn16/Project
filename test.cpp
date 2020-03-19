@@ -2,6 +2,10 @@
 
 using namespace std;
 
+void handle(int *matrix[], bool *check[], int posx, int posy){
+    
+}
+
 int main(){
     // data initialize
     int n, m, y, x;
@@ -20,5 +24,6 @@ int main(){
             else check[i][j]=true;
         }
     }
+    //handle(matrix,check,y,x);
     return 0;
 }

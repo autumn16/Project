@@ -1,4 +1,5 @@
-# 18 3
+# 2020 3 17
+# Linked list implement using Python
 
 class node:
     def __init__(self,data=None):
