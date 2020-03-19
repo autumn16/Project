@@ -1,5 +1,5 @@
 // 2020 3 17
-// Linked list implement using C++
+// Linked list implementation using C++
 #include <iostream>
 
 using namespace std;

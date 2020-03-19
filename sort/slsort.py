@@ -1,9 +1,9 @@
 # 2020 2 19
-# Selection sort implement using Python
+# Selection sort implementation using Python
 
 lib = [9,25,40,36,1,8]
 
-def to_sort(lib):
+def slsort(lib):
     for i in range(0,len(lib)):
         min = lib[i]
         for j in range(i+1,len(lib)):
@@ -11,7 +11,7 @@ def to_sort(lib):
                 min = lib[j]
                 lib[i],lib[j] = lib[j],lib[i]
 
-to_sort(lib)
+slsort(lib)
 print(lib)
 
 
