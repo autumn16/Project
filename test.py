@@ -1,14 +1,11 @@
-# QN 
-#import math
+n, m, k = map(int,input().split())
+size = n*m
+lib = list()
 
-#n = int(input())
-n = (map(int,input()))
-# get lib element using map
-lib = list(map(int, input().strip().split()))
+for i in range(1,n+1):
+    for j in range(1,m+1):
+        lib.append(i*j)
+
 lib.sort()
-m1 = 0
-while(True):
-    if(pow(m1,2) not in lib): 
-        print(pow(m1,2))
-        break
-    else: m1+=1
+print(lib[k-1])
+
