@@ -23,6 +23,7 @@ int binsearch(int arr[],int first, int last,int num){
 int main(){
     int arr[] = {1,8,9,25,36,40};
     int size = sizeof(arr)/sizeof(arr[0]);
+    //cout << size;
     int num = 25;
     //to_sort(arr,size);
     if(binsearch(arr,0,size-1,num)==-1) cout << "number not found\n";
