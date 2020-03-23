@@ -1,0 +1,6 @@
+def swap(a,b):
+    a,b = b,a
+    return a,b
+
+print(2,5)
+print(swap(2,5))
