@@ -11,15 +11,22 @@ class Stack:
         if(self._size==0): return True
         else: return False
 
-    def push_back(self,value):
+    def push(self,value):
         if(self._size==0): 
             self.arr[0]=value
             print(value,"is now head")
             self._size+=1
         else:
+            self._size+=1
+            for j in range(self._size,0,-1):
+                self.arr[j] = self.arr[j-1]
+            self.arr[0] = value
+            print(value,"successfully pushed into stack")
+            '''
             self.arr[self._size] = value
             print(value,"sucessfully push into stack")
             self._size+=1
+            '''
 
     def peak(self):
         print("Peak value is",self.arr[0])
@@ -44,8 +51,8 @@ class Stack:
         print("Size of the stack is ",self._size)
 
 myStack = Stack()
-myStack.push_back(4)
-myStack.push_back(5)
-myStack.push_back(6)
+myStack.push(4)
+myStack.push(5)
+myStack.push(6)
 myStack.pop(5)
 myStack.print()

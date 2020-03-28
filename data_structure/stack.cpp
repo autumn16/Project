@@ -14,16 +14,24 @@ public:
         if(_size==0) return true;
         else return false;
     }
-    void push_back(int value){
+    void push(int value){
         if(_size==0){
             arr[0]=value;
             _size++;
             cout << value << " is the first element\n";
         }
         else { 
+            _size++;
+            for(int i=_size-1; i>=1; i--){
+                arr[i]=arr[i-1];
+            }
+            arr[0] = value;
+            cout << value << " pushed successfully into stack\n";
+            /*
             arr[_size]=value;
             _size++;
-            cout << value << " pushed successfully into stack\n";
+            cout << value << " pushed successfully into stack\n"; */
+
         }
     }
     void pop(int value){
@@ -58,12 +66,12 @@ public:
 
 int main(){
     stack myStack;
-    myStack.push_back(4);
-    myStack.push_back(5);
-    myStack.push_back(6);
+    myStack.push(4);
+    myStack.push(5);
+    myStack.push(6);
     myStack.pop(5);
-    myStack.push_back(7);
-    myStack.push_back(8);
+    myStack.push(7);
+    myStack.push(8);
     myStack.pop(7);
     myStack.pop(4);
     myStack.peak(); 
