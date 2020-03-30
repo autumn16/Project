@@ -1,20 +1,42 @@
 #include <iostream>
-#include <vector>
+#define fu(i,a,b) for(int i=a; i<b; i++)
+#define fd(i,a,b) for(int i=a; i<b; i--)
+#define MAX 101
 
 using namespace std;
+int arr[MAX][MAX];
+int n,m,y,x;
+int lcount = 0;
+int rcount = 0;
+int count = 0;
+
+void init(){
+  for(int i=0; i<MAX; i++){
+    for(int j=0; j<MAX; j++){
+      arr[i][j]=1;
+    }
+  }
+}
+
+void solve(){
+
+}
+
 int main(){
-    vector<int> myVec;
-    vector<int>::iterator ptr;
-    myVec.push_back(1);
-    myVec.push_back(2);
-    myVec.push_back(3);
-    ptr = myVec.begin();
-    auto pTemp = myVec.begin();
-    //myVec.erase(ptr);
-    //myVec.erase(ptr);
-    for(int i=0; i<myVec.size(); i++){
-        cout << myVec[i] << " ";
+  cin >> n >> m >> y >> x;
+  init();
+  fu(i,0,n){
+    fu(j,0,m){
+      cin >> arr[i][j];
+    }
+  }
+  y=y-1;
+  x=x-1;
+  fu(i,0,n){
+    fu(j,0,m){
+      cout << arr[i][j] << " ";
     }
     cout << endl;
-    return 0;
+  }
+  return 0;
 }
